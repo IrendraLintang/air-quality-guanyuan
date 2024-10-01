@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 # Mengatur tema halaman
 st.set_page_config(
@@ -13,8 +14,11 @@ st.set_page_config(
 # Fungsi untuk memuat data
 @st.cache
 def load_data():
-    # Memuat dataset dari file CSV
-    data = pd.read_csv('PRSA_Data_Guanyuan_20130301-20170228.csv')
+
+    current_directory = os.path.dirname(__file__)
+    csv_path = os.path.join(current_directory, 'PRSA_Data_Guanyuan_20130301-20170228.csv')
+    
+    data = pd.read_csv(csv_path)
     return data
 
 # Fungsi untuk membersihkan dan mempersiapkan data
