@@ -3,8 +3,7 @@ This project presents an interactive dashboard for analyzing air quality data, s
 
 ## Setup Environment - Shell/Terminal
 ```
-mkdir proyek_analisis_data
-cd proyek_analisis_data
+cd Submission
 pipenv install
 pipenv shell
 pip install -r requirements.txt
@@ -12,5 +11,6 @@ pip install -r requirements.txt
 
 ## Run steamlit app
 ```
+cd dashboard
 streamlit run app.py
 ```
